@@ -1,12 +1,13 @@
 package com.pythonbot.Learnspringframework;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class GameRunner {
     //MarioGame game;
     private final GamingConsole game;
-    public GameRunner(GamingConsole game) {
+    public GameRunner(@Qualifier("MarioGamesQualifier") GamingConsole game) {
 
         this.game = game;
     }
