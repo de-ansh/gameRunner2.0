@@ -1,5 +1,8 @@
 package com.pythonbot.Learnspringframework;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class GameRunner {
     //MarioGame game;
     private final GamingConsole game;
