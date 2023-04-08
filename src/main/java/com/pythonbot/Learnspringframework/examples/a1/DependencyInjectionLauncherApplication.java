@@ -9,13 +9,30 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-//Field INJECTION
+//Field INJECTION-> dependency injected using field (no setter or Constructor)
 @Component
 class YourBusinessClass{
-    @Autowired
+
     Dependency1 dependency1;
-    @Autowired
+//    @Autowired
+  //  public void setDependency1(Dependency1 dependency1) {
+    //    System.out.println("Setter Injection 1");
+      //  this.dependency1 = dependency1;
+    //}
+    //@Autowired
+    //public void setDependency2(Dependency2 dependency2) {
+      //  this.dependency2 = dependency2;
+        //System.out.println("Setter Injection 2");
+    //}
+
+
     Dependency2 dependency2;
+    @Autowired
+    public YourBusinessClass(Dependency1 dependency1, Dependency2 dependency2) {
+        this.dependency1 = dependency1;
+        this.dependency2 = dependency2;
+        System.out.println("Constructor injection Your business class");
+    }
 
     public String toString(){
         return "Using "+ dependency1 + "and "+ dependency2;
