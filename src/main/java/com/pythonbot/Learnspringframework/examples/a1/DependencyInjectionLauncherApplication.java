@@ -11,6 +11,9 @@ import java.util.Arrays;
 @Component
 class YourBusinessClass{
 
+
+
+
     Dependency1 dependency1;
 //    @Autowired
   //  public void setDependency1(Dependency1 dependency1) {
