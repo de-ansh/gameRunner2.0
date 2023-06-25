@@ -32,6 +32,7 @@ class ClassB{
 public class LazyInitializationLauncherLauncherApplication {
 
     public static void main(String[] args) {
+        //testing push
         try(var context=
                     new AnnotationConfigApplicationContext
                             (LazyInitializationLauncherLauncherApplication.class)){
